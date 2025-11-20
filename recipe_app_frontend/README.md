@@ -1,4 +1,16 @@
-# Angular
+# Angular Recipe Browser
+
+This project is a simple recipe browsing application built with Angular, implementing a modern UI with the "Ocean Professional" theme.
+
+## Features
+
+- **Recipe List**: Browse all available recipes in a card-based layout.
+- **Recipe Details**: View a recipe's full details, including ingredients and preparation steps.
+- **Search**: Filter recipes by title or tags in real-time.
+
+---
+
+# Angular (Default README)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
 

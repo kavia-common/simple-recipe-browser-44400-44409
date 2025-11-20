@@ -1,0 +1,37 @@
+<div class="page-container" *ngIf="recipe$ | async as recipe; else notFound">
+  <div class="back-link-container">
+    <a [routerLink]="['/']" class="back-link">&larr; Back to Recipes</a>
+  </div>
+  <div class="recipe-detail-card">
+    <h1 class="recipe-title">{{ recipe.title }}</h1>
+    <img [src]="recipe.imageUrl" [alt]="recipe.title" class="recipe-image">
+
+    <div class="recipe-meta">
+      <span class="cook-time">Cook time: {{ recipe.cookTime }} minutes</span>
+    </div>
+
+    <div class="recipe-content">
+      <div class="ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+        </ul>
+      </div>
+
+      <div class="steps">
+        <h2>Instructions</h2>
+        <ol>
+          <li *ngFor="let step of recipe.steps">{{ step }}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <div class="page-container not-found-container">
+    <h2>Recipe not found</h2>
+    <p>We couldn't find the recipe you were looking for.</p>
+    <a [routerLink]="['/']" class="back-link">Go back to the recipe list</a>
+  </div>
+</ng-template>
