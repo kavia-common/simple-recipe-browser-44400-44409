@@ -1,0 +1,4 @@
+{
+    "command": "npm install --legacy-peer-deps",
+    "working_directory": "/home/kavia/workspace/code-generation/simple-recipe-browser-44400-44409/recipe_app_frontend"
+}
